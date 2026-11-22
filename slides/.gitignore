@@ -2,11 +2,29 @@
 _shot/frames/
 _shot/*.png
 !_shot/contact_sheet.png
+
+# _shot also holds generated media and one-off probes. only the real tools are
+# tracked: the sheet renderer, the script timer, and the video pipeline
+# (build_timeline -> build_video -> make_srt -> qa_video, driven by rec.mjs).
 _shot/*.py
 !_shot/mk_sheet.py
 !_shot/tts_time.py
 !_shot/timing_table.py
+!_shot/build_timeline.py
+!_shot/assemble.py
+!_shot/build_video.py
+!_shot/make_srt.py
+!_shot/qa_video.py
+_shot/*.mjs
+!_shot/rec.mjs
+!_shot/timeline.json
+_shot/narration.wav
+_qa_frames/
+
 debug.log
 .env
 _shot/tts/
 __pycache__/
+
+# the render is 39 MB and is rebuilt by _shot/build_video.py
+lab3_video.mp4

@@ -6,6 +6,17 @@ slides/_shot/*.py
 !slides/_shot/mk_sheet.py
 !slides/_shot/tts_time.py
 !slides/_shot/timing_table.py
+!slides/_shot/build_timeline.py
+!slides/_shot/assemble.py
+!slides/_shot/build_video.py
+!slides/_shot/make_srt.py
+!slides/_shot/qa_video.py
+slides/_shot/*.mjs
+!slides/_shot/rec.mjs
+!slides/_shot/timeline.json
+slides/_shot/narration.wav
+slides/_qa_frames/
+slides/lab3_video.mp4
 
 # LaTeX intermediates
 *.aux

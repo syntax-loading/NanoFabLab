@@ -1,0 +1,211 @@
+{
+ "fps": 30,
+ "open": 1.0,
+ "lead": 2.0,
+ "rate": 24000,
+ "channels": 1,
+ "sampwidth": 2,
+ "total": 576.4667,
+ "frames": 17294,
+ "audio": "narration.wav",
+ "pages": [
+  {
+   "page": 1,
+   "title": "Opening",
+   "wav": "tts/p01.wav",
+   "voice": 13.76,
+   "lead": 1.0,
+   "frames": 443,
+   "seg": 14.7667,
+   "start": 0.0,
+   "silence": 0.0067
+  },
+  {
+   "page": 2,
+   "title": "Where we start",
+   "wav": "tts/p02.wav",
+   "voice": 58.32,
+   "lead": 2.0,
+   "frames": 1810,
+   "seg": 60.3333,
+   "start": 14.7667,
+   "silence": 0.0133
+  },
+  {
+   "page": 3,
+   "title": "PECVD SiO2 hard mask",
+   "wav": "tts/p03.wav",
+   "voice": 33.84,
+   "lead": 2.0,
+   "frames": 1076,
+   "seg": 35.8667,
+   "start": 75.1,
+   "silence": 0.0267
+  },
+  {
+   "page": 4,
+   "title": "PECVD dual",
+   "wav": "tts/p04.wav",
+   "voice": 22.64,
+   "lead": 2.0,
+   "frames": 740,
+   "seg": 24.6667,
+   "start": 110.9667,
+   "silence": 0.0267
+  },
+  {
+   "page": 5,
+   "title": "Ellipsometry",
+   "wav": "tts/p05.wav",
+   "voice": 46.24,
+   "lead": 2.0,
+   "frames": 1448,
+   "seg": 48.2667,
+   "start": 135.6333,
+   "silence": 0.0267
+  },
+  {
+   "page": 6,
+   "title": "Surface prep (VPO)",
+   "wav": "tts/p06.wav",
+   "voice": 34.88,
+   "lead": 2.0,
+   "frames": 1107,
+   "seg": 36.9,
+   "start": 183.9,
+   "silence": 0.02
+  },
+  {
+   "page": 7,
+   "title": "Spin coating & edge bead",
+   "wav": "tts/p07.wav",
+   "voice": 34.24,
+   "lead": 2.0,
+   "frames": 1088,
+   "seg": 36.2667,
+   "start": 220.8,
+   "silence": 0.0267
+  },
+  {
+   "page": 8,
+   "title": "Soft bake",
+   "wav": "tts/p08.wav",
+   "voice": 25.04,
+   "lead": 2.0,
+   "frames": 812,
+   "seg": 27.0667,
+   "start": 257.0667,
+   "silence": 0.0267
+  },
+  {
+   "page": 9,
+   "title": "Stepper exposure",
+   "wav": "tts/p09.wav",
+   "voice": 22.72,
+   "lead": 2.0,
+   "frames": 742,
+   "seg": 24.7333,
+   "start": 284.1333,
+   "silence": 0.0133
+  },
+  {
+   "page": 10,
+   "title": "Post-exposure bake",
+   "wav": "tts/p10.wav",
+   "voice": 24.64,
+   "lead": 2.0,
+   "frames": 800,
+   "seg": 26.6667,
+   "start": 308.8667,
+   "silence": 0.0267
+  },
+  {
+   "page": 11,
+   "title": "Development",
+   "wav": "tts/p11.wav",
+   "voice": 33.92,
+   "lead": 2.0,
+   "frames": 1078,
+   "seg": 35.9333,
+   "start": 335.5333,
+   "silence": 0.0133
+  },
+  {
+   "page": 12,
+   "title": "Inspection 1",
+   "wav": "tts/p12.wav",
+   "voice": 12.8,
+   "lead": 2.0,
+   "frames": 444,
+   "seg": 14.8,
+   "start": 371.4667,
+   "silence": 0.0
+  },
+  {
+   "page": 13,
+   "title": "Hard-mask etch",
+   "wav": "tts/p13.wav",
+   "voice": 38.88,
+   "lead": 2.0,
+   "frames": 1227,
+   "seg": 40.9,
+   "start": 386.2667,
+   "silence": 0.02
+  },
+  {
+   "page": 14,
+   "title": "Resist strip",
+   "wav": "tts/p14.wav",
+   "voice": 17.04,
+   "lead": 2.0,
+   "frames": 572,
+   "seg": 19.0667,
+   "start": 427.1667,
+   "silence": 0.0267
+  },
+  {
+   "page": 15,
+   "title": "Main etch / breakthrough",
+   "wav": "tts/p15.wav",
+   "voice": 23.04,
+   "lead": 2.0,
+   "frames": 752,
+   "seg": 25.0667,
+   "start": 446.2333,
+   "silence": 0.0267
+  },
+  {
+   "page": 16,
+   "title": "Main etch / with oxygen",
+   "wav": "tts/p16.wav",
+   "voice": 55.36,
+   "lead": 2.0,
+   "frames": 1721,
+   "seg": 57.3667,
+   "start": 471.3,
+   "silence": 0.0067
+  },
+  {
+   "page": 17,
+   "title": "Second ellipsometry",
+   "wav": "tts/p17.wav",
+   "voice": 22.08,
+   "lead": 2.0,
+   "frames": 723,
+   "seg": 24.1,
+   "start": 528.6667,
+   "silence": 0.02
+  },
+  {
+   "page": 18,
+   "title": "Inspection 4 / the result",
+   "wav": "tts/p18.wav",
+   "voice": 21.68,
+   "lead": 2.0,
+   "frames": 711,
+   "seg": 23.7,
+   "start": 552.7667,
+   "silence": 0.02
+  }
+ ]
+}

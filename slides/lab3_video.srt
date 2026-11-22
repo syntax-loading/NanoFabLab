@@ -1,0 +1,676 @@
+1
+00:00:01,020 --> 00:00:03,579
+Two patterns are already on the wafer.
+
+2
+00:00:03,579 --> 00:00:07,082
+Alignment marks came first,
+then the active islands.
+
+3
+00:00:07,082 --> 00:00:09,776
+After that the gate stack was deposited.
+
+4
+00:00:09,776 --> 00:00:11,729
+Our task is the gate stripes.
+
+5
+00:00:11,729 --> 00:00:14,760
+The next page shows what
+we are cutting into.
+
+6
+00:00:16,787 --> 00:00:19,577
+This is the stack we are cutting into.
+
+7
+00:00:19,577 --> 00:00:24,790
+The panel under the photo is a
+cross-section through one single island.
+
+8
+00:00:24,790 --> 00:00:28,975
+The thicknesses differ by up
+to five orders of magnitude.
+
+9
+00:00:28,975 --> 00:00:34,482
+So the drawing lies about thickness on
+purpose, to keep all layers visible.
+
+10
+00:00:34,482 --> 00:00:37,786
+The top layer is the
+one we are going to cut.
+
+11
+00:00:37,786 --> 00:00:41,458
+A hundred nanometres of
+n-doped amorphous silicon.
+
+12
+00:00:41,458 --> 00:00:45,863
+Under it, there's seven and a
+half nanometres of gate oxide:
+
+13
+00:00:45,863 --> 00:00:48,139
+the thinnest film on the wafer.
+
+14
+00:00:48,139 --> 00:00:52,251
+The gate etching has to stop
+on it, and leave it intact.
+
+15
+00:00:52,251 --> 00:00:55,555
+The three below are the
+ones we must not cut.
+
+16
+00:00:55,555 --> 00:00:59,153
+Thirty nanometres of
+silicon - the active island,
+
+17
+00:00:59,153 --> 00:01:03,045
+the film the transistor
+channel is actually built in.
+
+18
+00:01:03,045 --> 00:01:04,660
+145 nanometres of BOX.
+
+19
+00:01:04,660 --> 00:01:07,818
+And then 725 micrometres of handle silicon.
+
+20
+00:01:07,818 --> 00:01:13,104
+Before any etching, one more film will
+be deposited on top of the stack.
+
+21
+00:01:13,104 --> 00:01:15,087
+That film is the hard mask.
+
+22
+00:01:17,120 --> 00:01:23,269
+One more film goes on top of the stack:
+forty nanometres of silicon dioxide,
+
+23
+00:01:23,269 --> 00:01:28,366
+put down by PECVD (plasma-enhanced
+chemical vapour deposition).
+
+24
+00:01:28,366 --> 00:01:33,949
+Silane and nitrous oxide go in; the
+plasma breaks them into radicals,
+
+25
+00:01:33,949 --> 00:01:37,833
+and the radicals build
+the oxide on the surface.
+
+26
+00:01:37,833 --> 00:01:42,040
+The layer growing on the
+cross-section is that film.
+
+27
+00:01:42,040 --> 00:01:45,924
+Forty nanometres is chosen
+for what comes later:
+
+28
+00:01:45,924 --> 00:01:50,940
+this is the hard mask, and it
+has to survive the silicon etch.
+
+29
+00:01:52,987 --> 00:01:56,173
+The thickness is set by the deposition time,
+
+30
+00:01:56,173 --> 00:02:02,256
+so it has to be measured - and it's hard
+for an ellipsometry to do it on a patterned
+
+31
+00:02:02,256 --> 00:02:03,356
+wafer.
+
+32
+00:02:03,356 --> 00:02:05,673
+So a second wafer, bare silicon,
+
+33
+00:02:05,673 --> 00:02:09,728
+goes through the same process
+and gets measured instead.
+
+34
+00:02:09,728 --> 00:02:15,787
+And that wafer will be measured twice today:
+once now, and once after the main etch.
+
+35
+00:02:17,653 --> 00:02:21,165
+Ellipsometry does not
+measure thickness directly.
+
+36
+00:02:21,165 --> 00:02:26,252
+It sends polarised light in and reads
+the polarisation that comes back:
+
+37
+00:02:26,252 --> 00:02:29,477
+linear before the wafer,
+elliptical after it.
+
+38
+00:02:29,477 --> 00:02:34,063
+The two angles are the measurement
+- psi is the amplitude ratio,
+
+39
+00:02:34,063 --> 00:02:35,998
+delta the phase difference.
+
+40
+00:02:35,998 --> 00:02:41,086
+Fit them across a range of wavelengths
+and two things come out at once:
+
+41
+00:02:41,086 --> 00:02:43,307
+refractive index and thickness.
+
+42
+00:02:43,307 --> 00:02:45,959
+Here we get film is 37.02 nanometres.
+
+43
+00:02:45,959 --> 00:02:50,975
+We measure five points: the centre,
+and four at sixty millimetres out.
+
+44
+00:02:50,975 --> 00:02:54,414
+The five agree to plus or
+minus 0.12 nanometres.
+
+45
+00:02:54,414 --> 00:02:56,636
+That means the film is uniform.
+
+46
+00:02:56,636 --> 00:03:00,864
+Against the forty-nanometre
+target it is 7.4 per cent thin,
+
+47
+00:03:00,864 --> 00:03:03,157
+inside the ten-nanometre window.
+
+48
+00:03:03,157 --> 00:03:04,073
+It passes.
+
+49
+00:03:05,920 --> 00:03:10,269
+The oxide we just deposited is
+hydrophilic: it ends in OH groups,
+
+50
+00:03:10,269 --> 00:03:13,615
+it holds water, and resist
+does not stick to that.
+
+51
+00:03:13,615 --> 00:03:19,369
+So there is one more step before the resist
+- dry the wafer, then make it repel water.
+
+52
+00:03:19,369 --> 00:03:22,045
+We pump down and bake: the water leaves.
+
+53
+00:03:22,045 --> 00:03:25,391
+HMDS vapour goes in and
+reacts with the OH groups.
+
+54
+00:03:25,391 --> 00:03:31,212
+What is left is a monolayer - one end bonded
+to the oxide, the methyl end pointing out.
+
+55
+00:03:31,212 --> 00:03:32,617
+Then purge, and vent.
+
+56
+00:03:32,617 --> 00:03:33,888
+One molecule thick.
+
+57
+00:03:33,888 --> 00:03:37,501
+It changes no geometry; it
+changes the surface energy.
+
+58
+00:03:37,501 --> 00:03:40,780
+The oxide now repels water
+instead of holding it.
+
+59
+00:03:42,820 --> 00:03:47,923
+Resist, 1.2 micrometres - and it
+goes onto a wafer that is spinning:
+
+60
+00:03:47,923 --> 00:03:49,499
+5000 rpm, 30 seconds.
+
+61
+00:03:49,499 --> 00:03:52,726
+The film is still liquid while it spins up,
+
+62
+00:03:52,726 --> 00:03:57,979
+and that is when the thickness is
+decided - faster spin, thinner film.
+
+63
+00:03:57,979 --> 00:04:00,906
+The spin also throws resist to the rim,
+
+64
+00:04:00,906 --> 00:04:05,858
+where it piles up into a bead
+several times thicker than the film.
+
+65
+00:04:05,858 --> 00:04:11,862
+That bead dries unevenly, flakes, and
+dirties everything the wafer touches next.
+
+66
+00:04:11,862 --> 00:04:17,040
+So it is rinsed off from the wafer:
+the rim first, then the backside.
+
+67
+00:04:19,087 --> 00:04:22,580
+The plate comes up under
+the wafer at 95 degrees.
+
+68
+00:04:22,580 --> 00:04:25,573
+The film left the spinner full of solvent.
+
+69
+00:04:25,573 --> 00:04:27,284
+The solvent leaves here.
+
+70
+00:04:27,284 --> 00:04:31,989
+95 degrees sits below the glass
+transition so the film won't flow.
+
+71
+00:04:31,989 --> 00:04:34,911
+The solvent leaves, and the film hardens.
+
+72
+00:04:34,911 --> 00:04:36,123
+It does not melt.
+
+73
+00:04:36,123 --> 00:04:40,543
+Two things are settled here: One
+is the adhesion to the oxide.
+
+74
+00:04:40,543 --> 00:04:44,107
+The other is the stress
+the spin left in the film.
+
+75
+00:04:46,153 --> 00:04:49,289
+A stepper does not expose
+the whole wafer at once.
+
+76
+00:04:49,289 --> 00:04:52,988
+It projects the reticle onto
+one field, steps, and repeats.
+
+77
+00:04:52,988 --> 00:04:58,005
+Field by field means the lens only has to
+be good over a few square centimetres,
+
+78
+00:04:58,005 --> 00:05:01,642
+and the reticle only has to
+carry one copy of the pattern.
+
+79
+00:05:01,642 --> 00:05:03,649
+The light does not draw a shape.
+
+80
+00:05:03,649 --> 00:05:06,470
+It changes how fast the
+resist will dissolve.
+
+81
+00:05:06,470 --> 00:05:08,853
+The shape only appears at development.
+
+82
+00:05:10,887 --> 00:05:13,711
+The light does not stop at the surface.
+
+83
+00:05:13,711 --> 00:05:19,721
+It goes through the resist, reflects off
+the silicon underneath, and comes back up.
+
+84
+00:05:19,721 --> 00:05:24,790
+Incident and reflected interfere, so
+the intensity ripples with depth.
+
+85
+00:05:24,790 --> 00:05:28,410
+So the film is not exposed
+uniformly along height.
+
+86
+00:05:28,410 --> 00:05:32,610
+At 110 degrees the photoproduct
+diffuses from high to low.
+
+87
+00:05:32,610 --> 00:05:35,507
+That flattens the concentration profile.
+
+88
+00:05:37,553 --> 00:05:39,020
+TMAH, 2.6 per cent.
+
+89
+00:05:39,020 --> 00:05:42,264
+Thirty seconds, then thirty seconds again.
+
+90
+00:05:42,264 --> 00:05:45,507
+Where the resist was exposed it dissolves.
+
+91
+00:05:45,507 --> 00:05:47,592
+Where it was not, it stays.
+
+92
+00:05:47,592 --> 00:05:51,144
+It is a positive resist,
+so the light removes.
+
+93
+00:05:51,144 --> 00:05:57,013
+The mask was dark over the gates, so
+the stripes that survive are the gates.
+
+94
+00:05:57,013 --> 00:05:59,098
+The cross-section shows it.
+
+95
+00:05:59,098 --> 00:06:04,735
+The orange is left on the gate only,
+and the field is down to bare oxide.
+
+96
+00:06:04,735 --> 00:06:06,974
+The pattern finally shows up.
+
+97
+00:06:06,974 --> 00:06:11,453
+From here the resist is the
+mask that the next etch obeys.
+
+98
+00:06:13,487 --> 00:06:15,154
+This is the second checkpoint.
+
+99
+00:06:15,154 --> 00:06:16,487
+Development is finished,
+
+100
+00:06:16,487 --> 00:06:20,321
+and the wafer goes under the microscope
+at a hundred and fifty times.
+
+101
+00:06:20,321 --> 00:06:24,766
+The pattern is in the right position, and
+nothing is missing, doubled or broken.
+
+102
+00:06:24,766 --> 00:06:26,267
+We can go to the next step.
+
+103
+00:06:28,307 --> 00:06:33,733
+The resist cannot carry this
+pattern through the whole gate etch.
+
+104
+00:06:33,733 --> 00:06:39,827
+That etch is chlorine with oxygen in
+it, and oxygen is what ashes resist.
+
+105
+00:06:39,827 --> 00:06:43,668
+So we transfer the pattern
+to the oxide first.
+
+106
+00:06:43,668 --> 00:06:48,009
+That is this step: CHF₃ and
+CF₄, fluorine chemistry,
+
+107
+00:06:48,009 --> 00:06:51,599
+opening the oxide where the resist is open.
+
+108
+00:06:51,599 --> 00:06:58,361
+It is timed, not endpointed, and it finishes
+a little way into the silicon below.
+
+109
+00:06:58,361 --> 00:07:02,619
+Fluorine etches sideways
+as fast as it etches down,
+
+110
+00:07:02,619 --> 00:07:07,127
+so the window comes out wider
+than the resist opening.
+
+111
+00:07:09,187 --> 00:07:11,904
+We use oxygen plasma to remove resist.
+
+112
+00:07:11,904 --> 00:07:14,479
+The masking job passes to the oxide.
+
+113
+00:07:14,479 --> 00:07:19,341
+From here the pattern is carried by
+thirty-seven nanometres of SiO₂.
+
+114
+00:07:19,341 --> 00:07:24,848
+Then we check under the microscope,
+making sure the pattern is still correct.
+
+115
+00:07:24,848 --> 00:07:26,207
+Then the main etch.
+
+116
+00:07:28,253 --> 00:07:31,860
+The wafer goes in clean
+and the mask is open.
+
+117
+00:07:31,860 --> 00:07:35,466
+What is still in the
+way is the native oxide:
+
+118
+00:07:35,466 --> 00:07:41,076
+a nanometre or two of SiO₂ that grows
+back whenever silicon meets air.
+
+119
+00:07:41,076 --> 00:07:43,800
+Chlorine radicals cannot touch it.
+
+120
+00:07:43,800 --> 00:07:47,567
+Only the ions can, and
+they come straight down.
+
+121
+00:07:47,567 --> 00:07:51,253
+That is the whole job of
+these twelve seconds.
+
+122
+00:07:53,340 --> 00:07:56,818
+The twelve seconds only opened the surface.
+
+123
+00:07:56,818 --> 00:08:00,376
+An etch with no direction cannot make gates.
+
+124
+00:08:00,376 --> 00:08:04,663
+So oxygen goes in: twenty
+seconds of Cl₂, HBr and O₂.
+
+125
+00:08:04,663 --> 00:08:11,456
+Oxygen arrives from every direction and
+coats every exposed face with a thin Si–O–Cl
+
+126
+00:08:11,456 --> 00:08:12,556
+layer.
+
+127
+00:08:12,556 --> 00:08:19,512
+The ions come from above only, so they clear
+that layer on the floor and nowhere else.
+
+128
+00:08:19,512 --> 00:08:23,637
+The floor goes down; the
+walls never move sideways.
+
+129
+00:08:23,637 --> 00:08:30,026
+And when the floor reaches the gate oxide,
+there is no silicon left to consume,
+
+130
+00:08:30,026 --> 00:08:35,526
+so the chlorine radicals stop being
+used up and their signal climbs.
+
+131
+00:08:35,526 --> 00:08:37,224
+That is the endpoint.
+
+132
+00:08:37,224 --> 00:08:39,974
+Etching keeps going a few seconds.
+
+133
+00:08:39,974 --> 00:08:44,099
+The oxide etches twenty-five
+to forty times slower,
+
+134
+00:08:44,099 --> 00:08:48,860
+so an over-etch clears the last
+patches without cutting into it.
+
+135
+00:08:50,687 --> 00:08:57,328
+The monitor wafer goes throught the same
+main etching recipe and comes back into the
+
+136
+00:08:57,328 --> 00:08:58,428
+ellipsometry.
+
+137
+00:08:58,428 --> 00:09:01,354
+Oxide stickness was 37.02 nanometres.
+
+138
+00:09:01,354 --> 00:09:02,619
+It is now 33.06.
+
+139
+00:09:02,619 --> 00:09:06,810
+3.96nm gone, and 89 per cent
+of the mask still there.
+
+140
+00:09:06,810 --> 00:09:12,819
+This implies that the hard mask only
+loss 3.96nm stickness, far from broken.
+
+141
+00:09:14,807 --> 00:09:16,254
+This is the last look.
+
+142
+00:09:16,254 --> 00:09:20,398
+The gates are continuous: no
+break, no bridge, no missing line.
+
+143
+00:09:20,398 --> 00:09:23,555
+The widths marked on the
+picture match the mask.
+
+144
+00:09:23,555 --> 00:09:27,370
+And the cap is still on top,
+which is how it should leave.
+
+145
+00:09:27,370 --> 00:09:33,026
+The one thing optics cannot judge is the
+sidewall, and that needs a SEM cross-section.
+
+146
+00:09:33,026 --> 00:09:36,447
+So the wafer passes, and it
+goes on to the next lab.
+

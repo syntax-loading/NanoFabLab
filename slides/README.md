@@ -178,6 +178,53 @@ instead of reading, and `qwen3.8-omni-flash` rejects the audio modality outright
 TTS averages ~145 wpm; a human reading the same text is closer to 110-120, so the
 measured column is a floor, and useful mainly for comparing pages with each other.
 
+## The video
+
+`lab3_video.mp4` is the deck with its narration: 9:36, 1920x1080, 30 fps, plus
+`lab3_video.srt` as a sidecar. It is not edited — it is *recorded*, one page at a
+time, so any single page can be re-recorded without touching the rest.
+
+```
+python _shot/build_timeline.py                    # -> _shot/timeline.json + narration.wav
+python _shot/build_video.py --work D:/tmp/vid     # record, encode, mux  (~18 min)
+python _shot/make_srt.py                          # sidecar subtitles
+python _shot/qa_video.py --sheet D:/tmp/qa.png    # lengths, per-page frames, levels
+```
+
+Three decisions carry the whole thing:
+
+* **One page = one clip.** `rec.mjs` loads page *N-1*, waits for it to settle,
+  starts a CDP screencast and only then presses ArrowRight, so the 1.7 s `#camera`
+  fly-in is *inside* the clip. Loading `#N` directly would fly in from the centre
+  of the field instead of from the previous page. Clips are independent: a bad
+  page costs one page. `--jobs 2` has hung the screencast before; keep it at 1.
+* **Audio and video sit on the same frame grid.** `build_timeline.py` rounds each
+  segment *up* to a whole frame and pads the leftover with silence, so clip *k*
+  and audio segment *k* are identical in length by construction. `assemble.py`
+  cuts each clip with `-frames:v`, never `-t` — `-t` lands one frame over about
+  half the time, and eighteen of those is eighteen frames of drift against the voice.
+* **The page turn is the lead-in.** A segment is `[2.0 s turn][voice][pad]`, so the
+  voice starts once the camera has arrived.
+
+Capture details worth knowing: a 1600x900 CSS viewport at device scale 1.2 gives
+exactly 1920x1080 of vector-sharp output (no upscaling of the stage). Chrome
+rounds the device width up by one pixel, so the stage is pinned to the viewport
+origin (`--pin`) and the spare column is cropped at encode. A 1-px nearly
+transparent tick animation is injected because `Page.startScreencast` only emits
+frames when the page changes something — page 1 was recording its first 5.9 s and
+then going quiet. Frame pacing is taken from the per-frame timestamps rather than
+assumed, so a slow frame does not shift the voice.
+
+The voice is the TTS wavs from the timing pass, joined with silence. To use a
+human recording, drop your own files into `_shot/tts/pNN.wav` and re-run
+`build_timeline.py` — nothing downstream knows where the voice came from.
+
+Page 19 (Summary) is deliberately absent: the ending is meant to be a different
+one, a fast pass back over the whole flow, and that is still to be assembled.
+Two consequences of cutting it, both cosmetic: the footer of the last page reads
+`18 / 19`, and the summary page's own content never appears. Both disappear the
+day the new ending is built as a real 19th page rather than as a montage.
+
 ## What the next sessions may want
 
 * **Q&A cheatsheet** - `QnA.md`: 44 questions with a speakable English answer

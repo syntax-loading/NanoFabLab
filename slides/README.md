@@ -8,6 +8,7 @@ labs/
 ├── slides/
 │   ├── lab3_process_flow.html   ← the deck (single file, no dependencies)
 │   ├── SCRIPT.md                ← the speaking script, page by page (read this to present)
+│   ├── QnA.md                   ← the Q&A cheatsheet (read this after the talk)
 │   ├── README.md                ← this file
 │   ├── .gitignore
 │   ├── .env                     ← API key for the TTS timing pass (never committed)
@@ -179,9 +180,13 @@ measured column is a floor, and useful mainly for comparing pages with each othe
 
 ## What the next sessions may want
 
-* **Q&A cheatsheet** - the facts with provenance are in `labs/LAB3_record_v2.md`
-  (every number marked verified / open), and the `> ` lines in `SCRIPT.md` are
-  already written as answers to the questions each page invites.
+* **Q&A cheatsheet** - `QnA.md`: 44 questions with a speakable English answer
+  each, the numbers card, the six "we did not record that" sentences, a
+  page-by-page index for interruptions, and a set of README-style traps
+  (PEB is not a chemically amplified resist; 8.16 µm is pitch, not CD;
+  the gate oxide was never verified directly). Facts come from
+  `labs/LAB3_record_v2.md`, the `> ` notes in `SCRIPT.md`, and slide numbers
+  in `md/slides/`.
 * **Video** - the deck is deterministic: `?instant=1` for a settled frame,
   `?notr=1&at=<ms>` to park a mid-animation frame, `?et=<ms>` to freeze the JS
   timelines; `_shot/mk_sheet.sh` shows the exact query used per page. Per-page

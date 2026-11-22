@@ -6,6 +6,9 @@ Materials for the LAB3 process-flow deck and the lab record.
 
 - **The deck:** [`slides/lab3_process_flow.html`](slides/lab3_process_flow.html) —
   open it in a browser. Single self-contained file, no build step, no network.
+- **Presenting it:** [`slides/SCRIPT.md`](slides/SCRIPT.md) is the narration, one
+  section per page; [`slides/QnA.md`](slides/QnA.md) is the Q&A cheatsheet
+  (44 likely questions, the numbers card, and the honest "not recorded" answers).
 - **Deck documentation, editing guide and QA notes:**
   [`slides/README.md`](slides/README.md) — read this before editing anything:
   it lists where the copy lives, which numbers are measured, which visual
@@ -18,6 +21,7 @@ Materials for the LAB3 process-flow deck and the lab record.
 labs/
 ├── slides/
 │   ├── lab3_process_flow.html   the deck (19 beats, ~15 min)
+│   ├── QnA.md                   the Q&A cheatsheet
 │   ├── README.md                how it works, where the copy is, what not to break
 │   ├── .gitignore
 │   └── _shot/                   contact-sheet renderer + the generated preview

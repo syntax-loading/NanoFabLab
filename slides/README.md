@@ -7,10 +7,14 @@ continuous camera take, 19 beats, ~15 min at 1× speed.
 labs/
 ├── slides/
 │   ├── lab3_process_flow.html   ← the deck (single file, no dependencies)
+│   ├── SCRIPT.md                ← the speaking script, page by page (read this to present)
 │   ├── README.md                ← this file
 │   ├── .gitignore
+│   ├── .env                     ← API key for the TTS timing pass (never committed)
 │   └── _shot/
 │       ├── mk_sheet.sh          ← renders all 19 beats + stitches a contact sheet
+│       ├── tts_time.py          ← reads each page aloud via qwen3-tts, measures it
+│       ├── timing_table.py      ← rebuilds the timing table at the end of SCRIPT.md
 │       └── contact_sheet.png    ← the current preview (generated)
 ├── assets/wafer_pattern/        ← wafer_pattern.js, the top-view pattern source
 └── HT26 Lab 3/                  ← raw measurement files + the original micrographs
@@ -56,7 +60,7 @@ Example still of the main etch at 4 s: `lab3_process_flow.html?notr=1&at=4000#16
 | 11 | Step 06 | Development | TMAH, the pattern opens |
 | 12 | Checkpoint | Inspection ① | micrograph, measured pitch 8.16 / 8.08 µm |
 | 13 | Step 07 | Hard-mask etch | CH₃F/CF₄ opens the oxide, undercuts |
-| 14 | Step 08 | Resist strip | O₂ ash, resist eaten from every side |
+| 14 | Step 08 | Resist strip | O₂ ash, resist eaten from every side; 20× micrograph of the opened hard mask |
 | 15 | Step 09 | Main etch · breakthrough | 12 s, no O₂, shallow narrow bite |
 | 16 | Step 10 | Main etch · with oxygen | 20 s, sidewall inhibitor, the trench goes down |
 | 17 | Step 11 | Second ellipsometry | monitor wafer again: 37.02 → 33.06 nm |
@@ -116,25 +120,72 @@ Editing rules that matter for correctness:
 
 ## Embedded photographs
 
-All three are base64 inside the HTML (search for `data:image/jpeg;base64`). The
+All four are base64 inside the HTML (search for `data:image/jpeg;base64`). The
 originals are in `HT26 Lab 3/`:
 
 | page | plate | original file |
 |---|---|---|
 | 2 | the "where we start" band | `Before process Captured Digital Sight 10 - EPI50X EPI BF 2.jpg` (cropped to a 7:1 band, rotated 0.405° to level) |
 | 12 | Inspection ① | `after expose_ gate measuringCaptured Digital Sight 10 - EPI150X EPI BF.jpg` |
+| 14 | opened hard mask, bottom-right corner | `hard mask Captured Digital Sight 10 - EPI20X EPI BF.jpg` (crop 2544,1644 → 3616,2312 = 92 × 57 µm across the array boundary, autocontrast, 900 × 563) |
 | 18 | Inspection ④ | `End of process Captured Digital Sight 10 - EPI150X EPI BF.jpg` |
 
-To swap one: crop to the plate's aspect (1.38 : 1), re-encode as JPEG, replace the
-base64 string — the plate CSS does the rounding, the shadow and the caption chip.
+To swap one: crop to the plate's aspect (1.38 : 1, or 1.60 : 1 for page 14), re-encode
+as JPEG, replace the base64 string — the plate CSS does the rounding, the shadow and the caption chip.
 
 ## Rendering the contact sheet
 
-`_shot/mk_sheet.sh` renders all 19 pages with headless Chrome and stitches them
-into `contact_sheet.png` (it points at a Playwright `chrome-headless-shell`
+`_shot/mk_sheet.sh` renders all 19 pages with headless Chrome, then `_shot/mk_sheet.py`
+stitches them into `contact_sheet.png` (it points at a Playwright `chrome-headless-shell`
 install; adjust `CHROME=` at the top if yours lives elsewhere). Pages 7, 14–17
 and the coating pages are captured mid-animation with `?notr=1&at=…`, the rest
 with `?instant=1`.
+
+## The speaking script
+
+`SCRIPT.md` is the narration, one section per page, in the same order as the deck.
+It is written to be read out loud, not to be browsed:
+
+* plain paragraphs = the words to say;
+* `> ` lines = notes for the speaker (why this page exists, what to cut if it runs
+  long, extra detail for questions) - never spoken;
+* `[顿]` = a half-second pause, not spoken;
+* `▶ 按 →` = the only cue that needs timing: press the right arrow here.
+
+Each heading carries the page's time budget (`— ~45 s`). Those numbers are the
+author's marks and are not to be edited by anyone else. The table at the end
+(`## 时间标记`) lists, per page, the mark, the measured length, and the difference.
+
+## Measuring the script
+
+The timing pass sends one page of narration to a text-to-speech model, saves the
+audio and reads the duration out of the WAV:
+
+```
+python _shot/tts_time.py --list       # parse only: 19 pages, ~1.5k words
+python _shot/tts_time.py              # measure every page (cached in _shot/tts/)
+python _shot/tts_time.py 3 5 12       # just these pages
+python _shot/tts_time.py --redo       # ignore the cache
+python _shot/timing_table.py          # rebuild the table at the end of SCRIPT.md
+```
+
+Keys live in `slides/.env` (git-ignored): `DASHSCOPE_API_KEY`, `MODEL`
+(`qwen3-tts-flash` - it reads the text verbatim; the omni models answer back
+instead of reading, and `qwen3.8-omni-flash` rejects the audio modality outright),
+`VOICE`, `LANGUAGE`. Output: `_shot/tts/pNN.wav` plus `tts/timing.json`.
+
+TTS averages ~145 wpm; a human reading the same text is closer to 110-120, so the
+measured column is a floor, and useful mainly for comparing pages with each other.
+
+## What the next sessions may want
+
+* **Q&A cheatsheet** - the facts with provenance are in `labs/LAB3_record_v2.md`
+  (every number marked verified / open), and the `> ` lines in `SCRIPT.md` are
+  already written as answers to the questions each page invites.
+* **Video** - the deck is deterministic: `?instant=1` for a settled frame,
+  `?notr=1&at=<ms>` to park a mid-animation frame, `?et=<ms>` to freeze the JS
+  timelines; `_shot/mk_sheet.sh` shows the exact query used per page. Per-page
+  durations for an audio track are in `_shot/tts/timing.json`.
 
 ## Deliberate choices (please do not "fix" these)
 

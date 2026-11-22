@@ -3,4 +3,10 @@ _shot/frames/
 _shot/*.png
 !_shot/contact_sheet.png
 _shot/*.py
+!_shot/mk_sheet.py
+!_shot/tts_time.py
+!_shot/timing_table.py
 debug.log
+.env
+_shot/tts/
+__pycache__/

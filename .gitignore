@@ -3,6 +3,9 @@ slides/_shot/frames/
 slides/_shot/*.png
 !slides/_shot/contact_sheet.png
 slides/_shot/*.py
+!slides/_shot/mk_sheet.py
+!slides/_shot/tts_time.py
+!slides/_shot/timing_table.py
 
 # LaTeX intermediates
 *.aux
@@ -23,3 +26,6 @@ HT26 Lab 3/lab3.pdf
 
 # stray Windows device-name file created by shell redirects
 CON
+slides/.env
+slides/_shot/tts/
+__pycache__/

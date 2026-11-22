@@ -125,6 +125,7 @@
 **A** — "It does not measure thickness. It sends polarised light in and reads the polarisation that comes back. Two angles change with the film, psi and delta. Fitted across a range of wavelengths they give two numbers at once, index and thickness. Here that is thirty-seven point zero two nanometres at an index of one point five two one six."
 
 > ⚠️ 被问 n：**1.5216** 是五点均值；不要用单点 1.518（那是第 3/4 点的值）。
+> ❓ "1.52 算正常吗"：热氧化层在 633 nm 约 1.46。我们这颗偏高，说明 PECVD 膜与热氧化层不是同一种材料（偏离化学计量 / 含氢 / 密度不同）。我们没做成分分析，所以只说"它们不一样"，**不指定机理**。
 > 为什么必须扫谱：单波长只有两个角量却要解两个未知数（n 和 d），所以 n 定错 d 会跟着偏，两个数必须成对报告。
 
 ### Q13 · 五个点怎么取的？均匀性多少？ ✅
@@ -273,6 +274,7 @@
 **A** — "I do not, directly. The monitor wafer has no gate oxide, so what I measured is the mask. The gate oxide's survival is an inference — the silicon etch ends on it, and the over-etch sits inside the budget that the selectivity allows. A direct check needs a cross-section, and this lab does not do one."
 
 > **这是最容易被专业的 TA 抓住的一处。** 宁可自己先说出来，比被问出来好。
+> 被问"掉 1 nm 会怎样"：栅氧从 7.5 到 6.5 就是少 13 %，漏电和击穿都会变差 —— 但**我们没有电学测试**，这句是原理，不是本实验结论。
 
 ### Q38 · 硬掩模损失 10.7 %，危险吗？ ✅
 **A** — "No. The mask is thirty-seven nanometres and loses about four, so it ends at eighty-nine per cent. To eat through it you would need a recipe about nine times longer than the one it saw."
@@ -281,6 +283,8 @@
 
 ### Q39 · 均匀性怎么量化？ ✅
 **A** — "Before the etch, the five points span zero point three one nanometres — zero point eight per cent of the film. After the etch, two point two nanometres — six point eight per cent. The deposition is uniform; the etch is what introduced the spread."
+
+> s² 是**方差**（0.0144 / 0.7631 nm²），标准差 s 是 0.12 / 0.87 nm；被问就换算，别把 s² 当 s 念。
 
 ---
 

@@ -384,13 +384,14 @@ the mask still there. This implies that the hard mask only loss 3.96nm stickness
 ## 18 · Inspection ④ · the result — ~25 s
 
 > 目的：这一页只说结论——图上没看到问题，一切正常，可以交接给下一步。
-> 画面：150× 蓝底成品图（caption: AFTER THE MAIN ETCH · CAP STILL ON），
-> 图上标了 0.80 / 1.33 / 0.96 / 0.72 µm 四个宽度；右上截面卡是一个带青色帽的栅柱。
+> 画面：150× 蓝底成品图（caption: AFTER THE MAIN ETCH · GATES OVER ISLANDS），
+> 图上标了 0.80 / 1.33 / 0.96 / 0.72 µm 四个宽度；右上截面卡是叠层的模型图，
+> 帽的高度来自 P17 的椭偏，不是这张照片看出来的。
 
 This is the last look.
 
-The gates are continuous: no break, no bridge, no missing line. The widths marked on the
-picture match the mask. And the cap is still on top, which is how it should leave.
+The gates are continuous: no break, no bridge, no missing line. The four widths marked on
+the picture run from 0.72 to 1.33 micrometres.
 
 The one thing optics cannot judge is the sidewall, and that needs a SEM cross-section.
 

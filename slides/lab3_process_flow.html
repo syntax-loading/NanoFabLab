@@ -839,9 +839,9 @@
         <rect class="layer" id="rHdmGate"  x="150" y="110.4" width="260" height="25.2" fill="var(--hdm)"/>
         <rect class="layer" id="rHdmFieldR" x="410" y="110.4" width="130" height="25.2" fill="var(--hdm)"/>
         <!-- resist -->
-        <rect class="layer" id="rResFieldL" x="20" y="48.8" width="130" height="61.6" fill="var(--resist)" opacity=".9" stroke="var(--resist)" stroke-width="1"/>
-        <rect class="layer" id="rResGate"  x="150" y="48.8" width="260" height="61.6" fill="var(--resist)" opacity=".9" stroke="var(--resist)" stroke-width="1"/>
-        <rect class="layer" id="rResFieldR" x="410" y="48.8" width="130" height="61.6" fill="var(--resist)" opacity=".9" stroke="var(--resist)" stroke-width="1"/>
+        <rect class="layer" id="rResFieldL" x="20" y="48.8" width="230" height="61.6" fill="var(--resist)" opacity=".9" stroke="var(--resist)" stroke-width="1"/>
+        <rect class="layer" id="rResGate"  x="250" y="48.8" width="60" height="61.6" fill="var(--resist)" opacity=".9" stroke="var(--resist)" stroke-width="1"/>
+        <rect class="layer" id="rResFieldR" x="310" y="48.8" width="230" height="61.6" fill="var(--resist)" opacity=".9" stroke="var(--resist)" stroke-width="1"/>
 
         </g>
         <!-- standing waves: the 365 nm light interferes with its own reflection, so the
@@ -2865,7 +2865,7 @@
     var N = 11, y0 = 48.8, h = 110.4 - 48.8, bh = h / N;
     // the mask is a gate pattern, so the resist is opened over the FIELD, not over the
     // gate: the two outer spans get the depth ripple, the middle one stays clean
-    [[20, 130], [410, 130]].forEach(function(sp){
+    [[20, 230], [310, 230]].forEach(function(sp){
       for (var i = 0; i < N; i++){
         var t = 0.5 + 0.5 * Math.cos(2 * Math.PI * (i + 0.5) / 3.4);
         var r = document.createElementNS("http://www.w3.org/2000/svg", "rect");

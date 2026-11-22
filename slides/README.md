@@ -241,6 +241,10 @@ day the new ending is built as a real 19th page rather than as a montage.
 
 ## Deliberate choices (please do not "fix" these)
 
+- **The retained resist is one gate wide, not one island wide.** In the
+  cross-section the gate stripe is 60 scene units on an ~8 um pitch, so the mask
+  opening on either side of it covers the field; the island underneath stays
+  wider than the gate on purpose (a gate crosses an island, it does not fill it).
 - **The plasma is a background wash, not a shape.** It fills the whole cut with
   one continuous gradient so that a stripped mask or an etched trench simply
   shows gas; there is no outline to notice.

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="760" height="760" viewBox="0 0 760 760" role="img" aria-label="Wafer surface pattern in three process states">
+  <rect x="0" y="0" width="760" height="760" fill="#070d16"/>
+  <text x="38" y="32" fill="#c9d6e4" font-family="Segoe UI, system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="600">
+    1   before lithography
+  </text>
+  <text x="38" y="46" fill="#7d92a8" font-family="Segoe UI, system-ui, -apple-system, sans-serif" font-size="11.5">
+    active-region islands only
+  </text>
+  <svg x="36" y="56" width="320" height="320" viewBox="0 0 760 760">
+    <defs>
+      <radialGradient id="wp-doc-a-base" cx="42%" cy="32%" r="78%">
+        <stop offset="0%" stop-color="#2a4a77"/>
+        <stop offset="55%" stop-color="#223c62"/>
+        <stop offset="100%" stop-color="#162943"/>
+      </radialGradient>
+    </defs>
+    <path d="M 245.182 648 A 300 300 0 1 1 514.818 648 Z" fill="url(#wp-doc-a-base)" stroke="rgba(255,255,255,.22)" stroke-width="1.5"/>
+    <g class="wp-root" data-wp="1" aria-label="wafer surface pattern">
+      <defs>
+        <clipPath id="wp-a-clip-disc">
+          <path d="M 245.182 648 A 300 300 0 1 1 514.818 648 Z"/>
+        </clipPath>
+        <g id="wp-a-cell-before">
+          <rect x="11.003" y="13.149" width="18.433" height="3.782" rx="1.6" fill="#efe6c4" stroke="#c9bd93" stroke-width="0.9" opacity="0.94"/>
+          <rect x="11.003" y="63.484" width="18.433" height="7.824" rx="2" fill="#efe6c4" stroke="#c9bd93" stroke-width="0.9" opacity="0.94"/>
+          <rect x="33.917" y="13.149" width="18.433" height="3.782" rx="1.6" fill="#efe6c4" stroke="#c9bd93" stroke-width="0.9" opacity="0.94"/>
+          <rect x="33.917" y="63.484" width="18.433" height="7.824" rx="2" fill="#efe6c4" stroke="#c9bd93" stroke-width="0.9" opacity="0.94"/>
+        </g>
+        <g id="wp-a-mark-v">
+          <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#101d30" opacity="0.34"/>
+          <line x1="-6" y1="-6" x2="-6" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="-3" y1="-6" x2="-3" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="0" y1="-6" x2="0" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="3" y1="-6" x2="3" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="6" y1="-6" x2="6" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+        </g>
+        <g id="wp-a-mark-h">
+          <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#101d30" opacity="0.34"/>
+          <line x1="-6" y1="-6" x2="6" y2="-6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="-6" y1="-3" x2="6" y2="-3" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="-6" y1="0" x2="6" y2="0" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="-6" y1="3" x2="6" y2="3" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="-6" y1="6" x2="6" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+        </g>
+      </defs>
+      <g id="wp-a-before" data-wp-state="before" clip-path="url(#wp-a-clip-disc)">
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="213.333" y="51.6"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="280" y="51.6"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="346.667" y="51.6"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="413.333" y="51.6"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="480" y="51.6"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="80" y="136.8"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="146.667" y="136.8"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="213.333" y="136.8"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="280" y="136.8"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="346.667" y="136.8"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="413.333" y="136.8"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="480" y="136.8"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="546.667" y="136.8"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="613.333" y="136.8"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="80" y="222"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="146.667" y="222"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="213.333" y="222"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="280" y="222"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="346.667" y="222"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="413.333" y="222"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="480" y="222"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="546.667" y="222"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="613.333" y="222"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="80" y="307.2"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="146.667" y="307.2"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="213.333" y="307.2"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="280" y="307.2"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="346.667" y="307.2"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="413.333" y="307.2"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="480" y="307.2"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="546.667" y="307.2"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="613.333" y="307.2"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="80" y="392.4"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="146.667" y="392.4"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="213.333" y="392.4"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="280" y="392.4"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="346.667" y="392.4"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="413.333" y="392.4"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="480" y="392.4"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="546.667" y="392.4"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="613.333" y="392.4"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="80" y="477.6"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="146.667" y="477.6"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="213.333" y="477.6"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="280" y="477.6"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="346.667" y="477.6"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="413.333" y="477.6"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="480" y="477.6"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="546.667" y="477.6"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="613.333" y="477.6"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="146.667" y="562.8"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="213.333" y="562.8"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="280" y="562.8"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="346.667" y="562.8"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="413.333" y="562.8"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="480" y="562.8"/>
+        <use href="#wp-a-cell-before" xlink:href="#wp-a-cell-before" x="546.667" y="562.8"/>
+        <use href="#wp-a-mark-v" xlink:href="#wp-a-mark-v" x="280" y="136.8"/>
+        <use href="#wp-a-mark-v" xlink:href="#wp-a-mark-v" x="480" y="136.8"/>
+        <use href="#wp-a-mark-h" xlink:href="#wp-a-mark-h" x="146.667" y="307.2"/>
+        <use href="#wp-a-mark-h" xlink:href="#wp-a-mark-h" x="280" y="307.2"/>
+        <use href="#wp-a-mark-h" xlink:href="#wp-a-mark-h" x="480" y="307.2"/>
+        <use href="#wp-a-mark-h" xlink:href="#wp-a-mark-h" x="613.333" y="307.2"/>
+        <use href="#wp-a-mark-v" xlink:href="#wp-a-mark-v" x="146.667" y="477.6"/>
+        <use href="#wp-a-mark-v" xlink:href="#wp-a-mark-v" x="280" y="477.6"/>
+        <use href="#wp-a-mark-v" xlink:href="#wp-a-mark-v" x="480" y="477.6"/>
+        <use href="#wp-a-mark-v" xlink:href="#wp-a-mark-v" x="613.333" y="477.6"/>
+      </g>
+    </g>
+    <line x1="245.18160362917826" y1="648" x2="514.8183963708218" y2="648" stroke="rgba(255,255,255,.28)" stroke-width="1.6"/>
+  </svg>
+  <text x="396" y="32" fill="#c9d6e4" font-family="Segoe UI, system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="600">
+    2   developed — resist still on
+  </text>
+  <text x="396" y="46" fill="#7d92a8" font-family="Segoe UI, system-ui, -apple-system, sans-serif" font-size="11.5">
+    gate areas keep the photoresist colour
+  </text>
+  <svg x="394" y="56" width="320" height="320" viewBox="0 0 760 760">
+    <defs>
+      <radialGradient id="wp-doc-b-base" cx="42%" cy="32%" r="78%">
+        <stop offset="0%" stop-color="#2a4a77"/>
+        <stop offset="55%" stop-color="#223c62"/>
+        <stop offset="100%" stop-color="#162943"/>
+      </radialGradient>
+    </defs>
+    <path d="M 245.182 648 A 300 300 0 1 1 514.818 648 Z" fill="url(#wp-doc-b-base)" stroke="rgba(255,255,255,.22)" stroke-width="1.5"/>
+    <g class="wp-root" data-wp="1" aria-label="wafer surface pattern">
+      <defs>
+        <clipPath id="wp-b-clip-disc">
+          <path d="M 245.182 648 A 300 300 0 1 1 514.818 648 Z"/>
+        </clipPath>
+        <g id="wp-b-cell-resist">
+          <rect x="11.003" y="13.149" width="18.433" height="3.782" rx="1.6" fill="#efe6c4" stroke="#c9bd93" stroke-width="0.9" opacity="0.94"/>
+          <rect x="11.003" y="63.484" width="18.433" height="7.824" rx="2" fill="#efe6c4" stroke="#c9bd93" stroke-width="0.9" opacity="0.94"/>
+          <rect x="33.917" y="13.149" width="18.433" height="3.782" rx="1.6" fill="#efe6c4" stroke="#c9bd93" stroke-width="0.9" opacity="0.94"/>
+          <rect x="33.917" y="63.484" width="18.433" height="7.824" rx="2" fill="#efe6c4" stroke="#c9bd93" stroke-width="0.9" opacity="0.94"/>
+          <rect x="19.17" y="11.826" width="2.1" height="60.897" rx="1.05" fill="#f0a06a" stroke="#cf7f4f" stroke-width="0.9" opacity="0.96"/>
+          <rect x="19.17" y="36.073" width="9.1" height="4.76" rx="1.428" fill="#f0a06a" stroke="#cf7f4f" stroke-width="0.9" opacity="0.96"/>
+          <rect x="42.083" y="11.826" width="2.1" height="60.897" rx="1.05" fill="#f0a06a" stroke="#cf7f4f" stroke-width="0.9" opacity="0.96"/>
+          <rect x="42.083" y="28.269" width="9.1" height="4.76" rx="1.428" fill="#f0a06a" stroke="#cf7f4f" stroke-width="0.9" opacity="0.96"/>
+        </g>
+        <g id="wp-b-mark-v">
+          <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#101d30" opacity="0.34"/>
+          <line x1="-6" y1="-6" x2="-6" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="-3" y1="-6" x2="-3" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="0" y1="-6" x2="0" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="3" y1="-6" x2="3" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="6" y1="-6" x2="6" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+        </g>
+        <g id="wp-b-mark-h">
+          <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#101d30" opacity="0.34"/>
+          <line x1="-6" y1="-6" x2="6" y2="-6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="-6" y1="-3" x2="6" y2="-3" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="-6" y1="0" x2="6" y2="0" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="-6" y1="3" x2="6" y2="3" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="-6" y1="6" x2="6" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+        </g>
+      </defs>
+      <g id="wp-b-resist" data-wp-state="resist" clip-path="url(#wp-b-clip-disc)">
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="213.333" y="51.6"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="280" y="51.6"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="346.667" y="51.6"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="413.333" y="51.6"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="480" y="51.6"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="80" y="136.8"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="146.667" y="136.8"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="213.333" y="136.8"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="280" y="136.8"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="346.667" y="136.8"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="413.333" y="136.8"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="480" y="136.8"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="546.667" y="136.8"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="613.333" y="136.8"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="80" y="222"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="146.667" y="222"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="213.333" y="222"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="280" y="222"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="346.667" y="222"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="413.333" y="222"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="480" y="222"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="546.667" y="222"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="613.333" y="222"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="80" y="307.2"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="146.667" y="307.2"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="213.333" y="307.2"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="280" y="307.2"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="346.667" y="307.2"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="413.333" y="307.2"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="480" y="307.2"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="546.667" y="307.2"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="613.333" y="307.2"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="80" y="392.4"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="146.667" y="392.4"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="213.333" y="392.4"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="280" y="392.4"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="346.667" y="392.4"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="413.333" y="392.4"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="480" y="392.4"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="546.667" y="392.4"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="613.333" y="392.4"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="80" y="477.6"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="146.667" y="477.6"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="213.333" y="477.6"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="280" y="477.6"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="346.667" y="477.6"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="413.333" y="477.6"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="480" y="477.6"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="546.667" y="477.6"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="613.333" y="477.6"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="146.667" y="562.8"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="213.333" y="562.8"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="280" y="562.8"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="346.667" y="562.8"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="413.333" y="562.8"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="480" y="562.8"/>
+        <use href="#wp-b-cell-resist" xlink:href="#wp-b-cell-resist" x="546.667" y="562.8"/>
+        <use href="#wp-b-mark-v" xlink:href="#wp-b-mark-v" x="280" y="136.8"/>
+        <use href="#wp-b-mark-v" xlink:href="#wp-b-mark-v" x="480" y="136.8"/>
+        <use href="#wp-b-mark-h" xlink:href="#wp-b-mark-h" x="146.667" y="307.2"/>
+        <use href="#wp-b-mark-h" xlink:href="#wp-b-mark-h" x="280" y="307.2"/>
+        <use href="#wp-b-mark-h" xlink:href="#wp-b-mark-h" x="480" y="307.2"/>
+        <use href="#wp-b-mark-h" xlink:href="#wp-b-mark-h" x="613.333" y="307.2"/>
+        <use href="#wp-b-mark-v" xlink:href="#wp-b-mark-v" x="146.667" y="477.6"/>
+        <use href="#wp-b-mark-v" xlink:href="#wp-b-mark-v" x="280" y="477.6"/>
+        <use href="#wp-b-mark-v" xlink:href="#wp-b-mark-v" x="480" y="477.6"/>
+        <use href="#wp-b-mark-v" xlink:href="#wp-b-mark-v" x="613.333" y="477.6"/>
+      </g>
+    </g>
+    <line x1="245.18160362917826" y1="648" x2="514.8183963708218" y2="648" stroke="rgba(255,255,255,.28)" stroke-width="1.6"/>
+  </svg>
+  <text x="217" y="376" fill="#c9d6e4" font-family="Segoe UI, system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="600">
+    3   resist stripped
+  </text>
+  <text x="217" y="390" fill="#7d92a8" font-family="Segoe UI, system-ui, -apple-system, sans-serif" font-size="11.5">
+    gate stripes and contact lands exposed
+  </text>
+  <svg x="215" y="400" width="320" height="320" viewBox="0 0 760 760">
+    <defs>
+      <radialGradient id="wp-doc-c-base" cx="42%" cy="32%" r="78%">
+        <stop offset="0%" stop-color="#2a4a77"/>
+        <stop offset="55%" stop-color="#223c62"/>
+        <stop offset="100%" stop-color="#162943"/>
+      </radialGradient>
+    </defs>
+    <path d="M 245.182 648 A 300 300 0 1 1 514.818 648 Z" fill="url(#wp-doc-c-base)" stroke="rgba(255,255,255,.22)" stroke-width="1.5"/>
+    <g class="wp-root" data-wp="1" aria-label="wafer surface pattern">
+      <defs>
+        <clipPath id="wp-c-clip-disc">
+          <path d="M 245.182 648 A 300 300 0 1 1 514.818 648 Z"/>
+        </clipPath>
+        <g id="wp-c-cell-gates">
+          <rect x="11.003" y="13.149" width="18.433" height="3.782" rx="1.6" fill="#efe6c4" stroke="#c9bd93" stroke-width="0.9" opacity="0.94"/>
+          <rect x="11.003" y="63.484" width="18.433" height="7.824" rx="2" fill="#efe6c4" stroke="#c9bd93" stroke-width="0.9" opacity="0.94"/>
+          <rect x="33.917" y="13.149" width="18.433" height="3.782" rx="1.6" fill="#efe6c4" stroke="#c9bd93" stroke-width="0.9" opacity="0.94"/>
+          <rect x="33.917" y="63.484" width="18.433" height="7.824" rx="2" fill="#efe6c4" stroke="#c9bd93" stroke-width="0.9" opacity="0.94"/>
+          <rect x="19.17" y="11.826" width="2.1" height="60.897" rx="1.05" fill="#e0738a" stroke="#b85974" stroke-width="0.9" opacity="0.96"/>
+          <rect x="19.17" y="36.073" width="9.1" height="4.76" rx="1.428" fill="#e0738a" stroke="#b85974" stroke-width="0.9" opacity="0.96"/>
+          <rect x="42.083" y="11.826" width="2.1" height="60.897" rx="1.05" fill="#e0738a" stroke="#b85974" stroke-width="0.9" opacity="0.96"/>
+          <rect x="42.083" y="28.269" width="9.1" height="4.76" rx="1.428" fill="#e0738a" stroke="#b85974" stroke-width="0.9" opacity="0.96"/>
+        </g>
+        <g id="wp-c-mark-v">
+          <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#101d30" opacity="0.34"/>
+          <line x1="-6" y1="-6" x2="-6" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="-3" y1="-6" x2="-3" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="0" y1="-6" x2="0" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="3" y1="-6" x2="3" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="6" y1="-6" x2="6" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+        </g>
+        <g id="wp-c-mark-h">
+          <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#101d30" opacity="0.34"/>
+          <line x1="-6" y1="-6" x2="6" y2="-6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="-6" y1="-3" x2="6" y2="-3" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="-6" y1="0" x2="6" y2="0" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="-6" y1="3" x2="6" y2="3" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+          <line x1="-6" y1="6" x2="6" y2="6" stroke="rgba(255,255,255,.45)" stroke-width="1" stroke-linecap="butt"/>
+        </g>
+      </defs>
+      <g id="wp-c-gates" data-wp-state="gates" clip-path="url(#wp-c-clip-disc)">
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="213.333" y="51.6"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="280" y="51.6"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="346.667" y="51.6"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="413.333" y="51.6"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="480" y="51.6"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="80" y="136.8"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="146.667" y="136.8"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="213.333" y="136.8"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="280" y="136.8"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="346.667" y="136.8"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="413.333" y="136.8"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="480" y="136.8"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="546.667" y="136.8"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="613.333" y="136.8"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="80" y="222"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="146.667" y="222"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="213.333" y="222"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="280" y="222"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="346.667" y="222"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="413.333" y="222"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="480" y="222"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="546.667" y="222"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="613.333" y="222"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="80" y="307.2"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="146.667" y="307.2"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="213.333" y="307.2"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="280" y="307.2"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="346.667" y="307.2"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="413.333" y="307.2"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="480" y="307.2"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="546.667" y="307.2"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="613.333" y="307.2"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="80" y="392.4"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="146.667" y="392.4"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="213.333" y="392.4"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="280" y="392.4"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="346.667" y="392.4"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="413.333" y="392.4"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="480" y="392.4"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="546.667" y="392.4"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="613.333" y="392.4"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="80" y="477.6"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="146.667" y="477.6"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="213.333" y="477.6"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="280" y="477.6"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="346.667" y="477.6"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="413.333" y="477.6"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="480" y="477.6"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="546.667" y="477.6"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="613.333" y="477.6"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="146.667" y="562.8"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="213.333" y="562.8"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="280" y="562.8"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="346.667" y="562.8"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="413.333" y="562.8"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="480" y="562.8"/>
+        <use href="#wp-c-cell-gates" xlink:href="#wp-c-cell-gates" x="546.667" y="562.8"/>
+        <use href="#wp-c-mark-v" xlink:href="#wp-c-mark-v" x="280" y="136.8"/>
+        <use href="#wp-c-mark-v" xlink:href="#wp-c-mark-v" x="480" y="136.8"/>
+        <use href="#wp-c-mark-h" xlink:href="#wp-c-mark-h" x="146.667" y="307.2"/>
+        <use href="#wp-c-mark-h" xlink:href="#wp-c-mark-h" x="280" y="307.2"/>
+        <use href="#wp-c-mark-h" xlink:href="#wp-c-mark-h" x="480" y="307.2"/>
+        <use href="#wp-c-mark-h" xlink:href="#wp-c-mark-h" x="613.333" y="307.2"/>
+        <use href="#wp-c-mark-v" xlink:href="#wp-c-mark-v" x="146.667" y="477.6"/>
+        <use href="#wp-c-mark-v" xlink:href="#wp-c-mark-v" x="280" y="477.6"/>
+        <use href="#wp-c-mark-v" xlink:href="#wp-c-mark-v" x="480" y="477.6"/>
+        <use href="#wp-c-mark-v" xlink:href="#wp-c-mark-v" x="613.333" y="477.6"/>
+      </g>
+    </g>
+    <line x1="245.18160362917826" y1="648" x2="514.8183963708218" y2="648" stroke="rgba(255,255,255,.28)" stroke-width="1.6"/>
+  </svg>
+  <text x="36" y="730" fill="#5c6f84" font-family="Segoe UI, system-ui, -apple-system, sans-serif" font-size="10">
+    WaferPattern 2.0.0  ·  disc Ø 600 uu at (380,380)  ·  primary flat on the chord y = 648  ·  grid 9 × 7 cells of 66.67 × 85.2 uu, rows laid up from the flat
+  </text>
+  <text x="36" y="743" fill="#5c6f84" font-family="Segoe UI, system-ui, -apple-system, sans-serif" font-size="10">
+    each cell has a 20 uu scribe lane  ·  marks: 16 uu blocks on every second lane crossing  ·  ids wp-before / wp-resist / wp-gates
+  </text>
+</svg>

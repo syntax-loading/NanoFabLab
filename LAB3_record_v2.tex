@@ -1,0 +1,417 @@
+% !TEX program = xelatex
+% LAB3 Gate Formation —— 实验记录 v2（核实版）
+% 编译：xelatex LAB3_record_v2.tex  （跑两遍以生成目录/页码）
+\documentclass[UTF8,a4paper,11pt,fontset=windows]{ctexart}
+
+\usepackage[top=2.2cm,bottom=2.2cm,left=2.0cm,right=2.0cm]{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+
+% ---------- 颜色 ----------
+\definecolor{okgreen}{HTML}{1B7F4B}
+\definecolor{warnred}{HTML}{B3261E}
+\definecolor{amber}{HTML}{B07800}
+\definecolor{inkblue}{HTML}{1F3A5F}
+\definecolor{lightgray}{HTML}{F2F2F2}
+\definecolor{keybg}{HTML}{EEF4EF}
+\definecolor{warnbg}{HTML}{FBEDEC}
+\definecolor{doubtbg}{HTML}{FDF6E3}
+
+% ---------- 状态标签 ----------
+\newcommand{\OK}{\textcolor{okgreen}{\textbf{已核实}}}
+\newcommand{\DOUBT}{\textcolor{amber}{\textbf{待确认}}}
+\newcommand{\FIXED}{\textcolor{warnred}{\textbf{已纠正}}}
+\newcommand{\UNK}{\textcolor{amber}{\textbf{未知}}}
+
+% ---------- 单位 ----------
+\newcommand{\um}{\ensuremath{\,\mu\mathrm{m}}}
+\newcommand{\nm}{\ensuremath{\,\mathrm{nm}}}
+\newcommand{\degC}{\ensuremath{\,^{\circ}\mathrm{C}}}
+\newcommand{\mjs}{\ensuremath{\,\mathrm{mJ/cm^2}}}
+
+% ---------- 盒子 ----------
+\newtcolorbox{keybox}[1][]{enhanced,colback=keybg,colframe=okgreen,
+  boxrule=0.6pt,left=8pt,right=8pt,top=6pt,bottom=6pt,arc=2pt,
+  fonttitle=\bfseries\small,title={#1}}
+\newtcolorbox{warnbox}[1][]{enhanced,colback=warnbg,colframe=warnred,
+  boxrule=0.6pt,left=8pt,right=8pt,top=6pt,bottom=6pt,arc=2pt,
+  fonttitle=\bfseries\small,title={#1}}
+\newtcolorbox{doubtbox}[1][]{enhanced,colback=doubtbg,colframe=amber,
+  boxrule=0.6pt,left=8pt,right=8pt,top=6pt,bottom=6pt,arc=2pt,
+  fonttitle=\bfseries\small,title={#1}}
+
+% ---------- 页眉页脚 ----------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{inkblue}LAB3 Gate Formation}
+\fancyhead[R]{\small\color{inkblue}实验记录 v2}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\setlist[itemize]{leftmargin=1.6em,itemsep=1pt,topsep=2pt}
+\setlist[enumerate]{leftmargin=1.8em,itemsep=1pt,topsep=2pt}
+\renewcommand{\arraystretch}{1.15}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries\color{inkblue} LAB3 --- Gate Formation}\\[4pt]
+  {\large 实验记录 v2（核实版）}\\[6pt]
+  {\small 取代 \texttt{LAB3\_checklist.md}（v1 为推断版，多处与事实不符，已作废）}\\[2pt]
+  {\small 课程：IH2659 / FIH3608 HT26 Nanofabrication Technologies \quad 周期：2026-11-20}
+\end{center}
+
+\vspace{-2pt}
+\begin{keybox}[本记录的一句话结论]
+参数全部由设备固定配方执行，学生不设定参数。本次实验可定量闭环的核心结果是：
+\textbf{主刻中 SiO$_2$ 的刻蚀速率 $\approx 0.198\nm$/s，a-Si 对 SiO$_2$ 选择比 $S\approx 25{:}1$，
+7.5\nm 栅氧的过刻安全窗 $\approx 11$\,s}。
+硬掩模在主刻后仍余 \textbf{89.3\%}，可判定“未穿”。
+唯一无法闭环的空缺是 \textbf{F 基刻硬掩模的时间未记录}。
+\end{keybox}
+
+\vspace{4pt}
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}l X@{}}
+\toprule
+数据来源 & 本人流程记录 · 手绘叠层（TA 标注）· 同学草稿 \texttt{lab3.pdf} · 两份椭偏原始 txt · 9 张显微照片 \\
+状态标记 & \textcolor{okgreen}{\textbf{已核实}}（三方印证）\quad \textcolor{amber}{\textbf{待确认}} \quad \textcolor{warnred}{\textbf{已纠正}}（他人记录有误，详 §6）\quad \textcolor{amber}{\textbf{未知}}（设备内部设定） \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{最终叠层}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.2cm} >{\raggedright\arraybackslash}p{4.4cm} X@{}}
+\toprule
+\textbf{层} & \textbf{厚度} & \textbf{说明 / 来源} \\
+\midrule
+PECVD SiO$_2$（硬掩模） & 目标 40\nm，\textbf{实测 37.02\nm} & 本 lab 现场沉积；椭偏 5 点 \\
+n$^+$ a-Si（栅电极） & \textbf{100\nm} & 非晶态，非 poly-Si \\
+栅氧 & \textbf{7.5\nm} & 沉积所得，包住岛顶与侧壁 \\
+Si 有源层 & \textbf{30\nm} & FDSOI \\
+BOX & \textbf{145\nm} & \FIXED\ 同学草稿写 185\nm \\
+手柄 Si & \textbf{725\um} & \FIXED\ 同学草稿写“725 nm”，单位错 \\
+\bottomrule
+\end{tabularx}
+\caption{LAB3 来料与沉积后的完整叠层。}
+\end{table}
+
+\begin{warnbox}[三个必须记住的事实]
+\begin{enumerate}
+  \item \textbf{无 TiN}。三个独立来源（本人记录、手绘叠层、同学草稿的剖面图）均无 TiN。
+  \item \textbf{栅电极全片为 n$^+$}，无 p$^+$、无功函数金属。
+  \item 因此 \textbf{LAB3 之后 NFET 与 PFET 在物理上完全相同}，两者的分化要到 LAB4 的 S/D 注入才发生。
+\end{enumerate}
+\end{warnbox}
+
+\clearpage
+\section{完整流程与学生动作}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\begin{tabularx}{\textwidth}{@{}c >{\raggedright\arraybackslash}p{3.0cm} >{\raggedright\arraybackslash}p{3.4cm} >{\raggedright\arraybackslash}p{4.3cm} X@{}}
+\toprule
+\textbf{\#} & \textbf{步骤} & \textbf{设备 / 配方} & \textbf{可读取参数} & \textbf{学生动作} \\
+\midrule
+1 & 接片、显微检查 & 光学显微镜 & — & 记片号、查缺陷、记颜色 \\
+2 & PECVD SiO$_2$ 硬掩模 & AM \textbf{P5000} / 配方 \textbf{LDR} & 13\,s，400\degC，2 片 & 装片、选配方 \\
+3 & 椭偏测厚 & 椭偏仪（5 点） & 37.02\nm，$n=1.522$ & 上片、记录 \\
+4 & 涂胶 & 轨道 & 正性胶 1.2\um；\textbf{软烘 95\degC} & 装片 \\
+5 & 曝光 & \textbf{Nikon NSR}，i-line 365\nm & \textbf{剂量 112.5\mjs} & 装片、确认配方 \\
+6 & PEB + 显影 & 轨道 & TMAH \textbf{2.6\%}，30+30\,s & 装片 \\
+7 & \textbf{光学检查 \textcircled{1}} & 显微镜 & 8.16 / 8.08\um（\textbf{间距}，非 CD） & 判读图形 \\
+8 & F 基刻硬掩模 & CHF$_3$ / CF$_4$ & \UNK\ 无时间记录 & 装片、选配方 \\
+9 & \textbf{光学检查 \textcircled{2}} & 显微镜 & — & 判读开窗 \\
+10 & 去胶 & \UNK\ 方式未记录 & — & 装片 \\
+11 & \textbf{光学检查 \textcircled{3}} & 显微镜 & — & 判读残胶 \\
+12 & 主刻 & Cl$_2$/HBr \textbf{12\,s} $\to$ $+$O$_2$ $\to$ Cl 终点 $\to$ 过刻 & 20\,s 主刻 & 装片、选配方 \\
+13 & 椭偏测监控片 & 椭偏仪（5 点） & \textbf{33.06\nm} & 上片、记录 \\
+14 & \textbf{光学检查 \textcircled{4}} & 显微镜 & 0.80 / 0.96 / 0.72 / 1.33\um & 判读成品 \\
+15 & 封存、交接 & — & — & 填表 \\
+\bottomrule
+\end{tabularx}
+\caption{LAB3 全流程。所有工艺参数由设备固定配方执行。}
+\end{table}
+
+\begin{keybox}[关于学生角色的核心认知]
+所有参数由固定配方执行，学生\textbf{不设定参数、不调时间}。学生的位置在\textbf{边界}上：装片、选配方、判读、记录。
+$$\text{LAB3} \;=\; 4\ \text{次装片} \;+\; 4\ \text{次光学判读} \;+\; 2\ \text{次椭偏} \;+\; \text{记录}$$
+\end{keybox}
+
+\section{关键参数（按可信度分级）}
+
+\subsection{实测 / 原始数据}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{6.6cm} X@{}}
+\toprule
+\textbf{项} & \textbf{值} \\
+\midrule
+硬掩模 CVD 后 5 点均值 & \textbf{37.0198\nm}（范围 36.905--37.213，跨度 0.308） \\
+折射率 $n$ @633\nm & 1.5216 \\
+主刻后 5 点均值 & \textbf{33.0558\nm}（范围 31.575--33.820，跨度 2.245） \\
+硬掩模残余 & 33.06\nm $=$ 原厚的 \textbf{89.3\%} \\
+PECVD 沉积速率 & $37.02/13 = 2.85\nm$/s $=171$\,nm/min \\
+\bottomrule
+\end{tabularx}
+\caption{两份椭偏原始数据的汇总量。}
+\end{table}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{@{}cccccc@{}}
+\toprule
+\textbf{点} & \textbf{(x, y) / mm} & \textbf{CVD 后 / nm} & \textbf{$n$} & \textbf{主刻后 / nm} & \textbf{$n$} \\
+\midrule
+1 & $(0,\,0)$      & 36.905 & 1.523 & 33.820 & 1.526 \\
+2 & $(60,\,0)$     & 37.035 & 1.524 & 33.089 & 1.527 \\
+3 & $(0,\,60)$     & 37.009 & 1.518 & \textbf{31.575} & 1.524 \\
+4 & $(-60,\,0)$    & 36.937 & 1.518 & 33.254 & 1.522 \\
+5 & $(0,\,-60)$    & 37.213 & 1.525 & 33.541 & 1.529 \\
+\midrule
+均值 & & \textbf{37.020} & 1.522 & \textbf{33.056} & 1.523 \\
+\bottomrule
+\end{tabular}
+\caption{监控片 5 点原始数据。同一片裸硅片：CVD 后 $\to$ 主刻后。}
+\end{table}
+
+\subsection{设备配方可读}
+
+曝光剂量 112.5\mjs\ · 波长 365\nm\ · 软烘 95\degC\ · 转速 5000\,rpm / 30\,s · 胶厚 1.2\um\
+· TMAH 2.6\% · 显影 60\,s · PECVD 13\,s / 400\degC\ · 破口 12\,s · 主刻 20\,s
+
+\subsection{未知（机器内部设定，报告中不应编造）}
+
+\begin{doubtbox}[空缺项 —— 属于“读不到”，不是“没记录”]
+\begin{itemize}
+  \item F 基刻硬掩模的\textbf{时间}与气体配比（最关键的空缺）
+  \item 去胶方式与参数
+  \item PEB 温度 / 时间；软烘时间
+  \item 主刻的压力 / 功率 / 流量；过刻秒数
+  \item 各步的 CD 实测值（只有显微软件标注的几个数）
+\end{itemize}
+\end{doubtbox}
+
+\section{定量结果}
+
+\subsection{SiO$_2$ 在主刻化学中的刻蚀速率}
+
+监控片为\textbf{同一片裸硅片}，CVD 后 37.02\nm，主刻后 33.06\nm。
+
+\begin{keybox}[关键推导]
+\[
+\Delta = 37.020 - 33.056 = 3.964\nm
+\]
+\begin{center}\small
+\begin{tabular}{@{}ll@{}}
+$R_{\mathrm{SiO_2}} = 3.964/20 = \mathbf{0.198\nm/s} = 11.9$\,nm/min & 全部发生在 20\,s 主刻（采纳值）\\[3pt]
+$R_{\mathrm{SiO_2}} = 3.964/32 = 0.124\nm/s = 7.4$\,nm/min & 摊到含 12\,s 破口的 32\,s（保守值）
+\end{tabular}
+\end{center}
+\end{keybox}
+
+\textbf{判据}：12\,s 破口段不通 O$_2$，Cl 对 SiO$_2$ 几乎不刻 $\Rightarrow$ 真实值更接近 \textbf{0.198\nm/s}。
+但监控片是\textbf{整片裸露}，而产品片的 SiO$_2$ 只在 a-Si 刻透后才暴露 $\Rightarrow$ \textbf{监控值 = 上界}。
+
+\subsection{选择比}
+
+\[
+R_{a\text{-}\mathrm{Si}} = \frac{100\nm}{20\,\mathrm{s}} = 5.0\nm/\mathrm{s} = 300\ \text{nm/min},
+\qquad
+S = \frac{R_{a\text{-}\mathrm{Si}}}{R_{\mathrm{SiO_2}}} = \frac{5.0}{0.198} \approx \mathbf{25{:}1}
+\]
+（若按 0.124 计则 $S\approx 40{:}1$。）
+
+\begin{keybox}[结论]
+\[ S \approx \mathbf{25\text{--}40\!:\!1} \]
+不是教科书常见的 “$>100{:}1$”。这一点直接决定了过刻预算的量级。
+\end{keybox}
+
+\subsection{栅氧预算（栅氧 7.5\nm）}
+
+栅氧只在 a-Si 刻透之后才暴露，即只承受\textbf{过刻}那几秒。
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{@{}cccl@{}}
+\toprule
+\textbf{过刻时间} & \textbf{$\Delta_{\mathrm{ox}}$} & \textbf{栅氧剩余} & \textbf{占原厚} \\
+\midrule
+3\,s        & 0.6\nm & 6.9\nm & 92\% \\
+5\,s        & 1.0\nm & 6.5\nm & 87\% \\
+8\,s        & 1.6\nm & 5.9\nm & 79\% \\
+\textbf{11.4\,s} & \textbf{2.25\nm} & 5.25\nm & \textbf{70\%（判据下限）} \\
+\bottomrule
+\end{tabular}
+\caption{过刻量与栅氧损耗（按 $R_{\mathrm{SiO_2}}=0.198\nm$/s）。}
+\end{table}
+
+\[
+\Delta_{\mathrm{ox}} = R_{\mathrm{SiO_2}}\cdot t_{\text{over}},\qquad
+t_{\text{over,max}} = \frac{0.3\times 7.5}{0.198} \approx 11.4\,\mathrm{s}
+\]
+
+\textbf{过刻安全窗 $\approx 11$\,s}（保守口径 18\,s）。
+
+\subsection{均匀性}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & \textbf{5 点跨度} & \textbf{相对} & \textbf{对 CD 的影响} \\
+\midrule
+CVD 后   & 0.308\nm & 0.83\% & \multicolumn{1}{c}{—} \\
+主刻后   & 2.245\nm & 6.8\%  & $\pm0.16\nm$/侧，可忽略 \\
+\bottomrule
+\end{tabular}
+\caption{均匀性变化。主刻引入非均匀性，且 $(0,+60)$ 点偏低约 2.2\nm。}
+\end{table}
+
+\subsection{膜厚偏差如何传播到 CD}
+
+目标 40\nm、实测 37.02\nm $\Rightarrow$ \textbf{薄 2.98\nm}。
+
+F 基刻蚀是\textbf{计时配方}，停在 a-Si 上。膜薄 2.98\nm $\Rightarrow$ 窗口提前 2.98\nm 打通
+$\Rightarrow$ F 等离子体\textbf{多刻 2.98\nm 的 a-Si}。
+
+\begin{itemize}
+  \item 对栅高：$2.98/100 = 3\%$，可忽略。
+  \item 对 CD：F 基化学各向异性较差，若一半横向 $\Rightarrow$ \textbf{CD 变宽约 3\nm}（全各向同性则 $+6\nm$）。
+\end{itemize}
+
+\begin{warnbox}[容易被忽略的耦合]
+“$\pm10\nm$ 膜厚判据合格”只说对了一半：\textbf{膜厚公差不会伤栅高，但会漏到 CD 上}。
+这解释了为什么硬掩模刻蚀的时间不能随意调整。
+\end{warnbox}
+
+\section{四次光学检查的证据链}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}c >{\raggedright\arraybackslash}p{2.6cm} >{\raggedright\arraybackslash}p{5.4cm} X@{}}
+\toprule
+\textbf{\#} & \textbf{时刻} & \textbf{该看到什么} & \textbf{不该看到什么} \\
+\midrule
+\textcircled{1} & 显影后（进 RIE 前） & 栅条连续、图形完整 & 断线、scum、桥接 \\
+\textcircled{2} & 硬掩模刻后（开窗后） & 窗口干净、整场一致 & 残胶遮挡、局部未开 \\
+\textcircled{3} & 去胶后（主刻前） & 表面无残胶 & 胶残留（会被 O$_2$ 灰化污染主刻） \\
+\textcircled{4} & 成品（主刻后） & 栅条跨岛连续、无裙边 & 断线、桥接、可见 notching \\
+\bottomrule
+\end{tabularx}
+\caption{四次检查的判据。}
+\end{table}
+
+\textbf{颜色编码}（TA 给定；可\textbf{定性}认层，不可\textbf{定量}测厚）：
+\begin{itemize}
+  \item \textbf{绿} $=$ 40\nm 覆盖 SiO$_2$
+  \item \textbf{白} $=$ 裸露 a-Si
+  \item \textbf{蓝} $=$ 场区（BOX $+$ 薄氧化层）
+\end{itemize}
+
+\texttt{End of process} 100X 图中“蓝底 $+$ 粉色栅条” $=$ 场区已露 $+$ 栅条残留
+$\Rightarrow$ \textbf{刻蚀到位的宏观判据}。
+
+\textbf{光学 BF 看不出的}：侧壁角度、notching、CD 精确值；需要 X-SEM。
+
+\section{已纠正的同学草稿错误}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}c >{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}p{4.0cm} X@{}}
+\toprule
+\textbf{\#} & \textbf{草稿原文} & \textbf{实际} & \textbf{性质} \\
+\midrule
+1 & BOX $\approx$ \textbf{185\nm} & \textbf{145\nm} & 数值错（出现两处） \\
+2 & 手柄片 $\approx$ \textbf{725\nm} ($=725{,}000$\nm) & \textbf{725\um} & 换算对、单位错 \\
+3 & \textbf{Dehydration Bake} 95\degC & 95\degC 是\textbf{软烘}温度 & 张冠李戴 \\
+4 & 参考片 $=$ \texttt{Si/SiO$_2$}（$t$ 未标） & \textbf{裸硅片} & 描述错，导致 37.03 无法解释 \\
+5 & \texttt{Deviation $-7.42\%$} 对比 \texttt{$\pm10$ nm} & 量纲混用 & 表述错 \\
+6 & step6 图注 8.16 / 8.08\um & 是\textbf{间距}，非 CD & 易误导 \\
+\bottomrule
+\end{tabularx}
+\caption{同学草稿中已确认的错误。}
+\end{table}
+
+\textbf{草稿缺失}（均属未完成，非错误）：PEB、软烘时间、F 基刻蚀、去胶、主刻全部参数、第二次椭偏、CD 量测。
+
+\section{待确认}
+
+\begin{enumerate}
+  \item \textbf{F 基刻硬掩模的时间与配方} —— 唯一影响完整预算的空缺（\textbf{已确认未记录}，非遗漏）
+  \item \textbf{F 基与 Cl 基是否分腔？} 推测分腔：F 污染会毁 Cl 化学，Cl 污染会毁氧化层刻蚀。
+        若分腔，则监控片只进 Cl 腔、只测主刻，与“同一片监控片”自洽
+  \item \textbf{PEB 是否真的执行}（草稿完全没有；本人记录有）
+  \item \textbf{n 阱在哪一道做}（已另发邮件询问 TA）
+  \item 过刻的实际秒数
+\end{enumerate}
+
+\section{与 L02 / 教材的差异（报告与口试用）}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.0cm} >{\raggedright\arraybackslash}p{4.2cm} >{\raggedright\arraybackslash}p{3.6cm} X@{}}
+\toprule
+\textbf{项} & \textbf{L02 理想 CMOS} & \textbf{本实验} & \textbf{后果} \\
+\midrule
+PFET 栅 & SiO$_2$/TiN/p$^+$ poly & n$^+$ a-Si（无 TiN） & 无 dual work function \\
+功函数工程 & 有 & 无 & PFET 的 $|V_t|$ 会到 1.5\,V 以上 \\
+栅介质 & EOT $\sim$1--1.5\nm & \textbf{7.5\nm} SiO$_2$ & $C_{\mathrm{ox}}$ 小 5--7 倍，驱动电流低 \\
+隔离 & STI & \textbf{mesa}（无 CMP） & 岛边角氧化层偏薄 $\Rightarrow$ corner device \\
+栅氧 & 热生长 & \textbf{沉积}（包侧壁） & 不能热氧化（30\nm 膜消耗不起） \\
+\bottomrule
+\end{tabularx}
+\caption{教学片与教材理想器件的差异。}
+\end{table}
+
+\textbf{为什么栅氧要 7.5\nm}：不是落后，而是\textbf{没有独立停止层时的必要设计}——靠厚栅氧
+$+$ 25--40:1 选择比，让计时配方也能安全过刻。
+
+\textbf{为什么膜厚判据能放到 $\pm10\nm$}：因为下面垫着 100\nm a-Si 当停止层，薄 3\nm 只是多刻 3\nm a-Si（3\%）。
+
+\section{结论：学生角色的边界}
+
+参数全部由固定配方执行 $\Rightarrow$ 风险不在“设错参数”，而在 \textbf{边界}：
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.6cm} X@{}}
+\toprule
+\textbf{风险} & \textbf{防御} \\
+\midrule
+选错配方 & 装片前核对屏幕配方名 \\
+放错片 / notch 反向 & 每次装片先看 notch、对片号 \\
+漏检 & 四次判读是流程的一部分，不是“有空才看” \\
+记错 / 没记 & 记步进机号、RIE 腔号，不只记配方名 \\
+\bottomrule
+\end{tabularx}
+\caption{自动化流程中的四类边界风险。}
+\end{table}
+
+自动化流程里\textbf{记录反而更重要}——你没有任何一手操作经验可以回忆，能带走的只有数字。
+
+\end{document}

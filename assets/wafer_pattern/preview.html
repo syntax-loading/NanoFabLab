@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>WaferPattern — preview</title>
+<style>
+  :root{
+    --page:#070d16;
+    --ink:#c9d6e4;
+    --muted:#7d92a8;
+    --cream:#efe6c4;
+    --rose:#e0738a;
+    --resist:#f0a06a;
+    --wafer:#223c62;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--page);color:var(--ink);
+    font:13px/1.45 "Segoe UI",system-ui,-apple-system,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  #stage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;
+    width:100vw;height:100vh;gap:2px;background:var(--page)}
+  .panel{position:relative;display:flex;align-items:center;justify-content:center;
+    min-width:0;min-height:0;background:radial-gradient(120% 120% at 50% 42%,#0d1728 0%,#070d16 70%)}
+  .panel svg{display:block;width:100%;height:100%}
+  .cap{position:absolute;left:14px;top:10px;font-size:12px;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--muted);pointer-events:none}
+  .cap b{color:var(--ink);font-weight:600;letter-spacing:.02em;text-transform:none;font-size:13px}
+  .cap i{font-style:normal;color:#5c6f84;font-size:11.5px;letter-spacing:.02em;text-transform:none}
+  .legend{align-items:flex-start;justify-content:flex-start;padding:46px 34px}
+  .legend h2{margin:0 0 14px;font-size:15px;font-weight:600;color:var(--ink);letter-spacing:.01em}
+  .legend dl{display:grid;grid-template-columns:auto 1fr;gap:7px 12px;margin:0;font-size:12.5px}
+  .sw{width:26px;height:11px;border-radius:3px;display:block;align-self:center}
+  .legend dt{display:flex;align-items:center;gap:0}
+  .legend dd{margin:0;color:var(--muted)}
+  .legend p{margin:16px 0 0;color:var(--muted);font-size:12px;max-width:34ch}
+  .legend code{color:#9fd0c8;font-size:11.5px}
+
+  /* single-state mode: one disc, 800x800 */
+  body.single{overflow:hidden}
+  body.single #stage{display:block;width:800px;height:800px;gap:0}
+  body.single .panel{width:800px;height:800px}
+  body.single .cap{display:none}
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<script src="wafer_pattern.js"></script>
+<script>
+(function () {
+  "use strict";
+  var NS = "http://www.w3.org/2000/svg";
+  var W = window.WaferPattern;
+
+  var COLORS = {
+    island: "#efe6c4",
+    gate:   "#e0738a",
+    resist: "#f0a06a",
+    field:  "#223c62"
+  };
+
+  var CAPTIONS = {
+    before: { n: "1", t: "before lithography", s: "active-region islands only" },
+    resist: { n: "2", t: "developed &mdash; resist still on", s: "gate areas keep the resist colour" },
+    gates:  { n: "3", t: "resist stripped", s: "gate stripes + contact lands exposed" }
+  };
+
+  function el(tag, attrs) {
+    var e = document.createElementNS(NS, tag);
+    for (var k in attrs) { if (attrs.hasOwnProperty(k)) e.setAttribute(k, attrs[k]); }
+    return e;
+  }
+
+  /* The host's wafer body, reproduced so the asset can be judged in place. */
+  function waferSvg(state, scope, group) {
+    var svg = el("svg", { viewBox: "0 0 760 760", role: "img" });
+    svg.setAttribute("aria-label", state + " state of the wafer surface pattern");
+
+    var defs = el("defs", {});
+    var gid = "wp-preview-base-" + scope;
+    var grad = el("radialGradient", { id: gid, cx: "42%", cy: "32%", r: "78%" });
+    grad.appendChild(el("stop", { offset: "0%",   "stop-color": "#2a4a77" }));
+    grad.appendChild(el("stop", { offset: "55%",  "stop-color": "#223c62" }));
+    grad.appendChild(el("stop", { offset: "100%", "stop-color": "#162943" }));
+    defs.appendChild(grad);
+    svg.appendChild(defs);
+
+    /* disc body = circle minus the primary-flat segment */
+    svg.appendChild(el("path", {
+      d: W.discPath(), fill: "url(#" + gid + ")",
+      stroke: "rgba(255,255,255,.22)", "stroke-width": "1.5"
+    }));
+
+    if (group) svg.appendChild(group);
+
+    /* flat edge line, same as the host paints */
+    var h = W.geometry.chordHalf;
+    svg.appendChild(el("line", {
+      x1: 380 - h, y1: 648, x2: 380 + h, y2: 648,
+      stroke: "rgba(255,255,255,.28)", "stroke-width": "1.6"
+    }));
+    return svg;
+  }
+
+  function panel(state, scope, single) {
+    var d = document.createElement("div");
+    d.className = "panel";
+    var g = W.build(single
+      ? { colors: COLORS, states: ["before", "resist", "gates"], show: state }
+      : { colors: COLORS, states: [state], scope: scope });
+    d.appendChild(waferSvg(state, scope, g));
+    if (!single) {
+      var c = CAPTIONS[state];
+      var cap = document.createElement("div");
+      cap.className = "cap";
+      cap.innerHTML = c.n + " &nbsp;<b>" + c.t + "</b><br><i>" + c.s + "</i>";
+      d.appendChild(cap);
+    }
+    return d;
+  }
+
+  function legend() {
+    var d = document.createElement("div");
+    d.className = "panel legend";
+    var g = W.geometry;
+    d.innerHTML =
+      '<div><h2>WaferPattern unit cell</h2>' +
+      '<dl>' +
+        '<dt><span class="sw" style="background:#efe6c4"></span></dt><dd>active-region island &mdash; <b>#efe6c4</b></dd>' +
+        '<dt><span class="sw" style="background:#e0738a"></span></dt><dd>gate stripe + contact land &mdash; <b>#e0738a</b></dd>' +
+        '<dt><span class="sw" style="background:#f0a06a"></span></dt><dd>photoresist on the gate areas &mdash; <b>#f0a06a</b></dd>' +
+        '<dt><span class="sw" style="background:#223c62;border:1px solid rgba(255,255,255,.18)"></span></dt><dd>wafer base &mdash; <b>#223c62</b></dd>' +
+        '<dt><span class="sw" style="background:repeating-linear-gradient(90deg,rgba(255,255,255,.45) 0 1px,transparent 1px 4px)"></span></dt><dd>alignment mark &mdash; <b>rgba(255,255,255,.45)</b></dd>' +
+      '</dl>' +
+      '<p>Grid <code>' + g.cols + ' &times; ' + g.rows + '</code> cells of ' +
+      '<code>' + (Math.round(g.cellW * 100) / 100) + ' &times; ' + (Math.round(g.cellH * 100) / 100) +
+      '</code> user units, each with a <code>' + g.streetW + '</code> uu scribe lane (content ' +
+      (Math.round(g.contentW * 100) / 100) + ' &times; ' + (Math.round(g.contentH * 100) / 100) + '). ' +
+      'Rows run up from the primary flat, whose chord is the centreline of the bottom lane &mdash; no cell is ' +
+      'cut by the flat. Marks (16 uu) sit on every second lane crossing, orientation alternating lane row by lane row.</p>' +
+      '</div>';
+    return d;
+  }
+
+  var stage = document.getElementById("stage");
+  var hash = (location.hash || "").replace(/^#/, "");
+  var single = W.states.indexOf(hash) >= 0;
+
+  if (single) {
+    document.body.className = "single";
+    stage.appendChild(panel(hash, "s", true));
+  } else {
+    var scopes = { before: "a", resist: "b", gates: "c" };
+    stage.appendChild(panel("before", scopes.before, false));
+    stage.appendChild(panel("resist", scopes.resist, false));
+    stage.appendChild(panel("gates",  scopes.gates,  false));
+    stage.appendChild(legend());
+  }
+}());
+</script>
+</body>
+</html>

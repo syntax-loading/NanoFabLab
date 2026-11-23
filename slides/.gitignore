@@ -17,9 +17,15 @@ _shot/*.py
 !_shot/qa_video.py
 _shot/*.mjs
 !_shot/rec.mjs
+!_shot/mk_pdf.mjs
 !_shot/timeline.json
 _shot/narration.wav
 _qa_frames/
+
+# PDF export scratch: per-page prints, rasterised checks, logs
+_shot/pdf/
+_shot/pdfpages/
+_shot/*.log
 
 debug.log
 .env

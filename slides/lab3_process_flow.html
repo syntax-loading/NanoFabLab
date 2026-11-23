@@ -663,6 +663,18 @@
   #bar i{display:block;height:100%;width:0;border-radius:2px;
     background:linear-gradient(90deg,#57d1c3,#8ee6d9);transition:width .22s linear}
   #bar i.done{background:#57d1c3}
+
+  /* ---------- print: one 16:9 sheet per beat ----------
+     Without this the browser paginates a 900 px stage across Letter and slices
+     every page. _shot/mk_pdf.mjs rides on these rules: it lets each beat run for
+     its own dwell time and only then prints, so no timeline is caught mid-move. */
+  @page{size:1600px 900px;margin:0}
+  @media print{
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    html,body{overflow:hidden}
+    /* fit() may have scaled the stage to a window that is not exactly 1600x900 */
+    #stage{transform:scale(1)!important}
+  }
 </style>
 </head>
 <body>

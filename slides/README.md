@@ -225,6 +225,47 @@ Two consequences of cutting it, both cosmetic: the footer of the last page reads
 `18 / 19`, and the summary page's own content never appears. Both disappear the
 day the new ending is built as a real 19th page rather than as a montage.
 
+## The PDF
+
+`lab3_process_flow.pdf` is 19 pages, 16:9 (1600x900 CSS px = 1200x675 pt), one
+page per beat, with every animation left at its **end** state — the frame that
+is on screen the moment before the arrow is pressed. It is the handout version:
+nothing moves, nothing is half-revealed.
+
+```
+node _shot/mk_pdf.mjs        # 19 pages, ~5 min, -> lab3_process_flow.pdf
+```
+
+Four things carry it:
+
+* **Why not `--print-to-pdf`.** The deck animates. `?instant=1` kills the CSS
+  keyframes, and the keyframes are what carry the "before -> after" work, so a
+  page printed that way is the *before* state. Headless virtual time does not
+  advance the compositor clock either, so `--virtual-time-budget` leaves a page
+  half revealed (this is why the contact sheet has to park animations with
+  `?at=`). The only honest route is to let each beat run for its own dwell time
+  and print afterwards; the `d` values in `CAM[]` are copied into `DWELL` in the
+  script, and that is where the five minutes go.
+* **Reload per page.** Every page is a fresh navigation to `?shot=N#N` — the
+  throwaway query exists only because `#1 -> #16` is a same-document hash change
+  and fires no load event. The stage is then pinned to the page origin
+  (`left/top:0`, `margin:0`, no transform) so a window that is not exactly
+  1600x900 cannot leak a `fit()` scale into the print layout, and the script
+  checks `#cur`, `#t1` and `#note` before it prints.
+* **The deck carries the page geometry** (`@page{size:1600px 900px;margin:0}`
+  plus `#stage{transform:scale(1)!important}` in the `@media print` block), so a
+  plain Ctrl+P also gives one 16:9 sheet per beat instead of paginating a 900 px
+  stage across Letter.
+* **The page box is corrected after the join.** Chrome answers "one 900 px page"
+  with a 675.12 pt box while painting only 900.00 px, so each page rasterises
+  with a white hairline along the bottom edge. `mk_pdf.mjs` rewrites
+  `/MediaBox` and `/TrimBox` to 675.00 pt in place once `pdfunite` has joined the
+  pages — same byte length, so the xref offsets stay valid and no PDF library is
+  needed.
+
+The PDF is committed (9.6 MB) because it is the thing that gets handed to a
+reader; the per-page prints under `_shot/pdf/` are not.
+
 ## What the next sessions may want
 
 * **Q&A cheatsheet** - `QnA.md`: 44 questions with a speakable English answer
